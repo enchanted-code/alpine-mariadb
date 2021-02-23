@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  mariadb:
+    build: .
+  restart: unless-stopped
+  environment:
+    # change these credentials in production
+    MYSQL_ROOT_PASSWORD: mysql
+    MYSQL_DATABASE: user
+    MYSQL_USER: user
+    MYSQL_PASSWORD: user
+  expose:
+    - 3306:3306
+  volumes:
+    - mariadb:/var/lib/mysql
+
+volumes:
+  mariadb:
