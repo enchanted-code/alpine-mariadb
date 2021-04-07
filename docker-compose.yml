@@ -11,7 +11,7 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: user
     expose:
-      - 3306:3306
+      - 3306
     volumes:
       - mariadb:/var/lib/mysql
 
